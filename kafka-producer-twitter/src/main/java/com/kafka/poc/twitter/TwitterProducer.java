@@ -1,4 +1,4 @@
-package kafka.twitter;
+package com.kafka.poc.twitter;
 
 import com.google.common.collect.Lists;
 import com.twitter.hbc.ClientBuilder;
@@ -123,6 +123,7 @@ public class TwitterProducer {
         properties.setProperty(ProducerConfig.COMPRESSION_TYPE_CONFIG, "snappy");
         properties.setProperty(ProducerConfig.LINGER_MS_CONFIG, "20");
         properties.setProperty(ProducerConfig.BATCH_SIZE_CONFIG, Integer.toString(32 * 1024));
+
         //Producer
         KafkaProducer<String, String> producer = new KafkaProducer<>(properties);
 

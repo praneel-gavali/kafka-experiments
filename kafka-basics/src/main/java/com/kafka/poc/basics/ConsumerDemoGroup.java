@@ -1,4 +1,4 @@
-package kafka.basics;
+package com.kafka.poc.basics;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -12,13 +12,12 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.Properties;
 
-public class ConsumerDemo {
-
-    private static Logger logger = LoggerFactory.getLogger(ConsumerDemo.class.getClass().getName());
-    public static final String BOOTSTRAP_SERVERS = "PLAINTEXT://192.168.29.74:9092";
+public class ConsumerDemoGroup {
+    private static Logger logger = LoggerFactory.getLogger(ConsumerDemoGroup.class.getClass().getName());
+    private static final String BOOTSTRAP_SERVERS = "PLAINTEXT://192.168.29.74:9092";
 
     public static void main(String[] args) {
-        String groupid = "first-application";
+        String groupid = "second-application";
 
         Properties properties = new Properties();
         properties.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, BOOTSTRAP_SERVERS);
@@ -32,13 +31,10 @@ public class ConsumerDemo {
 
         while (true) {
             ConsumerRecords<String, String> records = kafkaConsumer.poll(Duration.ofMillis(1000));
-
             for (ConsumerRecord<String, String> record : records) {
                 logger.info("Key: {}, Value {}", record.key(), record.value());
                 logger.info("Partition {} , Offset{}", record.partition(), record.offset());
             }
         }
-
-
     }
 }
