@@ -26,10 +26,10 @@ public class TwitterProducer {
     public static final String TOPIC = "twitter_tweets";
     Logger logger = LoggerFactory.getLogger(TwitterProducer.class.getName());
 
-    private static final String consumerKey = "XdvX5axer12phm7sLa8xXVr9s";
-    private static final String consumerSecret = "avfuqe4kwssxUsWF5nAC5CmSuERLIzIlQ2m0E4kw8iDGLSvc2x";
-    private static final String token = "52170505-AiMfVpGtUFZh4ErygXKEszYB6f3h48D1UxWhXIhJb";
-    private static final String tokenSecret = "x74iQ8CtzDltn6GfY4zInp7wfHbjJ9nwhZzWIe4y7DxYl";
+    private static final String consumerKey = "";
+    private static final String consumerSecret = "";
+    private static final String token = "";
+    private static final String tokenSecret = "";
     private static final String BOOTSTRAP_SERVERS = "PLAINTEXT://192.168.29.74:9092";
 
     List<String> terms = Lists.newArrayList("India");

@@ -23,6 +23,7 @@
     <modules>
         <module>kafka-basics</module>
         <module>kafka-consumer-elasticsearch</module>
+        <module>kafka-connect</module>
     </modules>
 
     <dependencies>
