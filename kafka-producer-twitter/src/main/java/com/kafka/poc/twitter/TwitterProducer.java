@@ -32,7 +32,7 @@ public class TwitterProducer {
     private static final String tokenSecret = "x74iQ8CtzDltn6GfY4zInp7wfHbjJ9nwhZzWIe4y7DxYl";
     private static final String BOOTSTRAP_SERVERS = "PLAINTEXT://192.168.29.74:9092";
 
-    List<String> terms = Lists.newArrayList("Kafka");
+    List<String> terms = Lists.newArrayList("India");
 
     public static void main(String[] args) {
         new TwitterProducer().run();
